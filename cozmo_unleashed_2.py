@@ -16,7 +16,7 @@
 #
 #
 # simple_dock_with_chargermarker
-# This script will use Walls & a Charger Marker to locat the Charger while using an asyncio.gather()
+# This script will use Walls & a Charger Marker to locate the Charger while using an asyncio.gather()
 # The Walls, FreePlay Lights, & Charger Marker can be turned off & on as needed
 # These Definitions are Asyncio Definitions and must require a Python version that can run Asyncio scripts
 # This script is an attempt to get Cozmo to see either the Charger or the Charger Marker at the same time
@@ -1197,6 +1197,6 @@ if __name__ == '__main__':
 	cozmo.setup_basic_logging()
 	cozmo.robot.Robot.drive_off_charger_on_connect = False  # Cozmo can stay on charger for now SIKE
 	try:
-		cozmo.connect_with_3dviewer(run, enable_camera_view=True, show_viewer_controls=False)
+		cozmo.connect(run)
 	except cozmo.ConnectionError as e:
 		SystemExit("A connection error with viewer occurred: %s" % e)
